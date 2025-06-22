@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المهام - تحدي النجوم</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <h1 class="app-title">✨ تحدي النجوم ✨</h1>
+            <nav class="app-nav">
+                <a href="index.html" class="nav-link active">المهام</a>
+                <a href="rewards.html" class="nav-link">المكافآت</a>
+            </nav>
+            <div class="header-controls">
+                <div class="stars-display">🌟 <span id="header-stars-stat">0</span></div>
+                <label class="switch">
+                    <input type="checkbox" id="theme-switcher-checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-icon">🔥</span>
+                <span class="stat-label">سلسلة الإنجاز</span>
+                <span id="streak-stat" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">📅</span>
+                <span class="stat-label">مهام اليوم</span>
+                <span id="today-stat" class="stat-value">0</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>أضف مهمة جديدة</h3>
+            <form id="add-task-form">
+                <input type="text" id="task-input" placeholder="اكتب نص المهمة هنا..." required>
+                <div class="time-inputs">
+                    <input type="time" id="task-start-time" title="وقت البدء">
+                    <input type="time" id="task-end-time" title="وقت الانتهاء">
+                </div>
+                <button type="submit">أضف المهمة</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h3>قائمة المهام</h3>
+            <ul id="task-list"></ul>
+            <p id="empty-list-msg">لا توجد مهام حاليًا. هيا نبدأ!</p>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
